@@ -10,13 +10,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace AS_3.Models
 {
+    
     public class Order
 
 {
-    public int date {get;set;}
-    public string name {get;set;}
-    public string price {get;set;}
-
-    public List<Customer> Customers {get;set;}
+        public int orderID{get;set;} 
+        public DateTime orderDate { get; set; } = DateTime.Now;
+        public int DeliverID {get; set;}
+        public DelveryP DelveryP {get; set;}
+    
 }
 }

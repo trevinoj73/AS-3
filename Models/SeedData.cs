@@ -15,17 +15,46 @@ namespace AS_3.Models
                 serviceProvider.GetRequiredService<DbContextOptions<OrderContext>>()))
             {
                
-                if (context.Order.Any())
+                if (context.Customers.Any())
                 {
                     return;   
                 }
 
-                context.Order.AddRange(
-                    new Order
+                context.Customers.AddRange(
+                    new Customer
                     {
-                        name = "12in pizza",
-                         price= "12.2",
-                        date = 12-12-21,
+                        firstName = "Javier",
+                         lastName= "Trevino",
+                        Email = "jtrevino1@buffs.wtamu.edu",
+                        Address="1300 Nowhere St",
+                        City="Amarillo",
+                        State="TX",
+                        zipCode=12345,
+                        phoneNumber="8062125000"
+                
+                    },
+                      new Customer
+                    {
+                        firstName = "Rees",
+                         lastName= "Byrd",
+                        Email = "",
+                        Address="",
+                        City="",
+                        State="",
+                        zipCode=12345,
+                        phoneNumber=""
+                
+                    },
+                      new Customer
+                    {
+                        firstName = "Ashley",
+                         lastName= "Gilbert",
+                        Email = "",
+                        Address="",
+                        City="",
+                        State="",
+                        phoneNumber="",
+                        zipCode=1234,
                 
                     }
 

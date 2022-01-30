@@ -10,23 +10,18 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace AS_3.Models
 {
-    public class Customer
+      public class Customer
 {
-    public int CustID {get;set;}
-
-    [Required]
-    public string address {get;set;}
-      [Required]
-    public string city {get;set;}
-      [Required]
-    public string state {get;set;}
-      [Required]
-    public int zipCode {get;set;}
-      [Required]
-    public string eMail {get;set;}
-      [Required]
-    public int phoneNumber{get;set;}
-    public Order Order {get;set;}
+        public int CustID {get;set;}
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string Email { get; set; }
+        public string Address {get; set;}
+        public string City {get; set;}
+        public string State {get; set;}
+        public int zipCode {get; set;}
+        public String phoneNumber {get; set;}
+   public List<Order> Orders {get;set;}
 
 }
 }

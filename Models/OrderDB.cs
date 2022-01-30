@@ -1,5 +1,5 @@
+using System;
 using Microsoft.EntityFrameworkCore;
-
 
 namespace  AS_3.Models 
 {
@@ -10,9 +10,11 @@ namespace  AS_3.Models
         {
         }
 
-        public DbSet <Customer> Customer { get; set; }
-
-        public DbSet<Order> Order {get;set;}
+        public DbSet <Customer> Customers { get; set; }
+        public DbSet<DelveryP> DelveryPs{get;set;}
+        public DbSet<Grocery> Groceries {get;set;}
+        public DbSet<Store> Stores{get;set;}
+        public DbSet<Order> Orders {get;set;}
         
     }
 }
